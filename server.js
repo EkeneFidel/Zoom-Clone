@@ -14,7 +14,7 @@ const io = new Server(server);
 const peerServer = ExpressPeerServer(server, { debug: true });
 
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+app.use(express.static("./public"));
 app.use("/peerjs", peerServer);
 
 app.get("/", (req, res) => {
